@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BUJA Admin
 
-## Available Scripts
+이 프로젝트는 [**여행의 모든 것, TRIP!**]에서 사용될 웹 클라이언트로
 
-In the project directory, you can run:
+CRA[Create React App](https://github.com/facebook/create-react-app)로 구현되었습니다.
 
-### `npm start`
+### 프로젝트 디버깅을 위해서
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+디버깅을 하기 위해서는 프로젝트 디렉토리에서, 다음 스크립트를 실행해주세요:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### `npm start`
 
-### `npm test`
+개발자모드로 앱이 실행됩니다.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어주세요.
 
-### `npm run build`
+### 프로젝트 퍼블리싱을 위해서
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+퍼블리싱을 위해서는 Build를 해야합니다.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#### `npm build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`build` 폴더에 퍼블리싱된 앱이 빌드가 완료됩니다. 앱을 빌드하면 `리액트`로 작성된 스크립트등이 최적화 됩니다.
 
-### `npm run eject`
+## 프로젝트 설명
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+프로젝트내에서 참고해야할 부분을 설명하겠습니다. 여기서 설명이 없는 부분은 크게 중요하지 않은 부분이라고 생각하면 됩니다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 설계 구조
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    /src
+        /assets
+            /img
+                이미지들을 관리하고 있습니다
+            /css
+                css들을 관리하고 있습니다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+        /components
+            공통으로 사용하는 컴포넌트들을 정의하고 있습니다.
 
-## Learn More
+        /pages
+            페이지 컴포넌트들을 정의하고 있습니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+        /actions
+            서버와 통신하기 위한 모듈들을 정의하고 있습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+        /lib
+            프로젝트의 다방면에서 사용되는 라이브러리들을 정의하고 있습니다.
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+        App.js
+            리액트 프로젝트의 시작부분입니다.
