@@ -5,11 +5,11 @@ import '../../assets/css/pages/home/wrapper.css';
 export default class Box extends Component {
     render = () => {
         const {
+            boxes,
             left,
             center,
             right,
-            box,
-            set = 'full'
+            set
         } = this.props;
 
         return (
@@ -21,8 +21,8 @@ export default class Box extends Component {
                     <div className='left container'>
                         {
                             set === 'left' &&
-                            <div className='box'>
-                                {box}
+                            <div className='boxes'>
+                                {boxes}
                             </div>
                         }
                         <div
@@ -38,8 +38,8 @@ export default class Box extends Component {
                     <div className='center container'>
                         {
                             set === 'center' &&
-                            <div className='box'>
-                                {box}
+                            <div className='boxes'>
+                                {boxes}
                             </div>
                         }
                         <div
@@ -55,8 +55,8 @@ export default class Box extends Component {
                     <div className='right container'>
                         {
                             set === 'right' &&
-                            <div className='box'>
-                                {box}
+                            <div className='boxes'>
+                                {boxes}
                             </div>
                         }
                         <div
@@ -69,8 +69,8 @@ export default class Box extends Component {
                 }
                 {
                     left === undefined && center === undefined && right === undefined &&
-                    <div className='box'>
-                        {box}
+                    <div className='boxes'>
+                        {boxes}
                     </div>
                 }
             </div>

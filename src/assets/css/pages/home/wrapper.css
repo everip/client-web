@@ -19,12 +19,30 @@
     background-repeat: no-repeat;
 }
 
-.home-wrapper.full .box {
+.home-wrapper.full .boxes {
+    display: flex;
     margin: auto;
 }
 
 .home-wrapper.full .home-box {
     width: 50rem;
+}
+
+.home-wrapper.full.us .home-box {
+    width: 15rem;
+}
+
+.home-wrapper.full.us .home-box .icon {
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.home-wrapper.full.us .home-box .icon:hover {
+    filter: blur(1px);
+}
+
+.home-wrapper.full.us .home-box .content .head {
+    cursor: pointer;
 }
 
 .home-wrapper.left .left,

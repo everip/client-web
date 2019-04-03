@@ -53,7 +53,8 @@ export default class Home extends Component {
                 </div>
 
                 <Wrapper
-                    box={
+                    set='full'
+                    boxes={
                         <Box
                             icon={Images.HomeHelp}
                             content={{
@@ -68,7 +69,7 @@ export default class Home extends Component {
                     set='right'
                     left={Images.HomeCarouselBangkok}
                     right={Images.HomeCarouselDanang}
-                    box={
+                    boxes={
                         <Box
                             icon={Images.HomeCamera}
                             content={{
@@ -83,7 +84,7 @@ export default class Home extends Component {
                     set='left'
                     left={Images.HomeCarouselBangkok}
                     right={Images.HomeCarouselDanang}
-                    box={
+                    boxes={
                         <Box
                             icon={Images.HomeHanger}
                             content={{
@@ -99,7 +100,7 @@ export default class Home extends Component {
                     left={Images.HomeCarouselBangkok}
                     right={Images.HomeCarouselDanang}
                     center={Images.HomeCarouselOsaka}
-                    box={
+                    boxes={
                         <Box
                             icon={Images.HomeFood}
                             content={{
@@ -111,14 +112,31 @@ export default class Home extends Component {
                 />
 
                 <Wrapper
-                    box={
-                        <Box
-                            icon={Images.HomeHelp}
-                            content={{
-                                head: <p>We make you happy</p>,
-                                body: <p>It provides customized travel information for you <br /> and is available free of charge.</p>,
-                            }}
-                        />
+                    set='full us'
+                    boxes={
+                        <>
+                            <Box
+                                icon={{ path: 'https://avatars2.githubusercontent.com/u/31611484' }}
+                                content={{
+                                    head: <p onClick={() => { window.open('https://github.com/sociablesasha') }}>YONGHYUN</p>,
+                                    body: <p>DESIGNER, DEVELOPER</p>,
+                                }}
+                            />
+                            <Box
+                                icon={{ path: 'https://avatars2.githubusercontent.com/u/46661287' }}
+                                content={{
+                                    head: <p onClick={() => { window.open('https://github.com/sw-son') }}>SANGWOO</p>,
+                                    body: <p>DATA COLLECTOR</p>,
+                                }}
+                            />
+                            <Box
+                                icon={{ path: 'https://avatars1.githubusercontent.com/u/0' }}
+                                content={{
+                                    head: <p onClick={() => { window.open('mailto:sociablesasha@gmail.com') }}>YOU</p>,
+                                    body: <p>NEXT TIME, JOIN</p>,
+                                }}
+                            />
+                        </>
                     }
                 />
             </div>
