@@ -1,0 +1,35 @@
+.home-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    font-family: 'Sunflower', sans-serif;
+}
+
+.home-box .icon {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-box .content {
+    margin-top: 1.25rem;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.home-box .content .head {
+    font-size: 2.5rem;
+}
+
+.home-box .content .body {
+    margin-top: 1.25rem;
+    color: #999;
+    font-size: 1.15rem;
+}
