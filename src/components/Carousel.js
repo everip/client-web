@@ -9,8 +9,27 @@ export default class Carousel extends Component {
         this.state = {
             data: props.data,
             current: 0,
-            size: props.data.length
+            size: props.data.length,
+            slide: true
         }
+
+        this.slide = setInterval(this.handleRight, 1000);
+    }
+
+    handleStart = () => {
+        this.setState({
+            slide: true
+        }, () => {
+            this.slide = setInterval(this.handleRight, 1000);
+        })
+    }
+
+    handleStop = () => {
+        this.setState({
+            slide: false
+        }, () => {
+            clearInterval(this.slide);
+        })
     }
 
     handleLeft = () => {
@@ -34,6 +53,7 @@ export default class Carousel extends Component {
         const {
             data,
             current,
+            slide
         } = this.state;
 
         const {
@@ -76,6 +96,10 @@ export default class Carousel extends Component {
                                     />
                                 )
                             }
+                            <span
+                                className={`carousel-${slide ? 'stop' : 'start'}`}
+                                onClick={slide ? this.handleStop : this.handleStart}
+                            />
                         </div>
                     </div>
                 </div>

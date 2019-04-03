@@ -105,17 +105,33 @@
     margin-right: auto;
 }
 
-.carousel .carousel-panels .carousel-panel {
+.carousel .carousel-panels span {
     width: 1rem;
     height: 1rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    background: rgba(255, 255, 255, 0);
-    border: 1px solid rgba(0, 0, 0, .75);
-    border-radius: 1rem;
     cursor: pointer;
+}
+
+.carousel .carousel-panels .carousel-panel {
+    background: rgba(255, 255, 255, .75);
+    border-radius: 1rem;
 }
 
 .carousel .carousel-panels .carousel-panel.active {
     background: rgba(0, 0, 0, .75);
+}
+
+.carousel .carousel-panels .carousel-start {
+    border-style: solid;
+    border-width: 0.5rem 0 0.5rem 1rem;
+    border-color: transparent transparent transparent rgba(255, 255, 255, .75);
+    box-sizing: border-box;
+}
+
+.carousel .carousel-panels .carousel-stop {
+    border-style: double;
+    border-width: 0 0 0 1rem;
+    border-color: rgba(255, 255, 255, .75);
+    box-sizing: border-box;
 }
