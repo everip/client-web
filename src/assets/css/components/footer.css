@@ -1,7 +1,17 @@
 .footer {
-    height: 150px;
-    font-size: 30px;
-    color: #fff;
-    text-align: center;
-    background: #333;
+    display: flex;
+    position: relative;
+    height: 20rem;
+    filter: blur(0.5px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: saturation;
+}
+
+.footer .footer-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
 }

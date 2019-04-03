@@ -1,3 +1,4 @@
+import Footer from './components/footer.jpg';
 import Email from './components/email.svg';
 import Git from './components/git.svg';
 
@@ -11,6 +12,10 @@ import HomeHanger from './pages/home/hanger.svg';
 import HomeFood from './pages/home/food.svg';
 
 const Images = {
+    Footer: {
+        name: 'footer',
+        path: Footer,
+    },
     Email: {
         name: 'email',
         path: Email,
