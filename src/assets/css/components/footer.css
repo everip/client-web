@@ -39,8 +39,15 @@
 }
 
 .footer .footer-overlay .footer-content .links span {
+    width: 4em;
     margin: auto;
     padding: 0.5em 1em;
-    border: 0.15em solid #808080;
+    border: 0.15em solid #555;
     border-radius: 0.25em;
+    text-align: center;
+}
+
+.footer .footer-overlay .footer-content .links span:last-child {
+    background: #555;
+    color: rgba(0, 0, 0, 0.75);
 }

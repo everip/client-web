@@ -18,7 +18,8 @@ export default class Footer extends Component {
                     <div className='footer-content'>
                         <div className='copyright'>©EVERIP 2019. All Right Reserved</div>
                         <div className='links'>
-                            <span onClick={() => { console.log('link') }}>Facebook</span>
+                            <span onClick={() => { window.open('https://www.facebook.com/profile.php?id=100008311933745') }}>Facebook</span>
+                            <span onClick={() => { window.open('https://github.com/trip-wherever-you-want-go') }}>GitHub</span>
                         </div>
                     </div>
                 </div>
