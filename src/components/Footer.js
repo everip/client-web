@@ -14,6 +14,14 @@ export default class Footer extends Component {
                 }}
             >
                 <div className='footer-back'></div>
+                <div className='footer-overlay'>
+                    <div className='footer-content'>
+                        <div className='copyright'>©EVERIP 2019. All Right Reserved</div>
+                        <div className='links'>
+                            <span onClick={() => { console.log('link') }}>Facebook</span>
+                        </div>
+                    </div>
+                </div>
             </footer>
         );
     }

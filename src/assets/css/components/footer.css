@@ -1,12 +1,13 @@
 .footer {
     display: flex;
     position: relative;
-    height: 20rem;
+    height: 15em;
     filter: blur(0.5px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: saturation;
+    font-family: 'Sunflower', sans-serif;
 }
 
 .footer .footer-back {
@@ -14,4 +15,32 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
+}
+
+.footer-overlay {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-overlay .footer-content {
+    margin: auto;
+}
+
+.footer .footer-overlay .footer-content {
+    color: #808080;
+    font-size: 1.25em;
+}
+
+.footer .footer-overlay .footer-content .links {
+    display: flex;
+    margin-top: 1.5em;
+}
+
+.footer .footer-overlay .footer-content .links span {
+    margin: auto;
+    padding: 0.5em 1em;
+    border: 0.15em solid #808080;
+    border-radius: 0.25em;
 }
