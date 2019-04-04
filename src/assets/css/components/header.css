@@ -1,15 +1,12 @@
 .header {
     display: flex;
-    position: absolute;
+    position: fixed;
     z-index: 9;
     width: 100%;
     height: 8em;
+    background: rgba(0, 0, 0, .05);
     transition-duration: .25s;
     font-family: 'Hi Melody', cursive;
-}
-
-.header:hover {
-    background: rgba(0, 0, 0, .05);
 }
 
 .header .header-logo {
