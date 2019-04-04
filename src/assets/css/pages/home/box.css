@@ -2,16 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    width: 25rem;
-    height: 20rem;
-    padding: 2.5rem;
+    width: 25em;
+    height: 20em;
+    padding: 2.5em;
     overflow: hidden;
     font-family: 'Sunflower', sans-serif;
 }
 
 .home-box .icon {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7.5em;
+    height: 7.5em;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
@@ -19,7 +19,7 @@
 
 .home-box .content {
     width: 100%;
-    margin-top: 1.25rem;
+    margin-top: 1.25em;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
@@ -27,11 +27,11 @@
 }
 
 .home-box .content .head {
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 
 .home-box .content .body {
-    margin-top: 1.25rem;
+    margin-top: 1.25em;
     color: #999;
-    font-size: 1.15rem;
+    font-size: 1.15em;
 }

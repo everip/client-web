@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     width: 100%;
-    height: 35rem;
+    height: 35em;
     overflow: hidden;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .home-wrapper.full .home-box {
-    width: 50rem;
+    width: 50em;
 }
 
 .home-wrapper.full.us .home-box {
-    width: 15rem;
+    width: 15em;
 }
 
 .home-wrapper.full.us .home-box .icon {
@@ -48,24 +48,24 @@
 .home-wrapper.left .left,
 .home-wrapper.right .right,
 .home-wrapper.center .center {
-    width: 30rem;
+    width: 30em;
     height: 100%;
 }
 
 .home-wrapper.left .right,
 .home-wrapper.right .left {
-    width: calc(100% - 30rem);
+    width: calc(100% - 30em);
     height: 100%;
 }
 
 .home-wrapper.center .left,
 .home-wrapper.center .right {
-    width: calc(100% - 30rem);
+    width: calc(100% - 30em);
     height: 100%;
 }
 
 .home-wrapper.left .left .item,
 .home-wrapper.right .right .item,
 .home-wrapper.center .center .item {
-    height: calc(100% - 25rem);
+    height: calc(100% - 25em);
 }
