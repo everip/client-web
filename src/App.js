@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Footer } from './components';
+import { Header, Footer, SideBar } from './components';
 import Pages from './pages';
 
 class App extends Component {
@@ -7,6 +7,7 @@ class App extends Component {
     return (
       <>
         <Header />
+        <SideBar />
         <Pages />
         <Footer />
       </>
