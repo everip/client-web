@@ -45,16 +45,16 @@
 
 .carousel-contents .carousel-content .head {
     color: rgba(255, 255, 255, 1);
-    font-size: 5rem;
+    font-size: 5em;
     font-weight: bold;
     text-align: center;
     letter-spacing: 10px;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.25em;
 }
 
 .carousel-contents .carousel-content .body {
     color: rgba(255, 255, 255, .95);
-    font-size: 2.5rem;
+    font-size: 2.5em;
     text-align: center;
 }
 
@@ -65,8 +65,8 @@
     opacity: 1;
     top: 0;
     bottom: 0;
-    padding: 5rem;
-    font-size: 3rem;
+    padding: 5em;
+    font-size: 3em;
     color: rgba(0, 0, 0, .75);
 }
 
@@ -100,22 +100,22 @@
     display: flex;
     z-index: 1;
     margin-top: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
 }
 
 .carousel .carousel-panels span {
-    width: 1rem;
-    height: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     cursor: pointer;
 }
 
 .carousel .carousel-panels .carousel-panel {
     background: rgba(255, 255, 255, .75);
-    border-radius: 1rem;
+    border-radius: 1em;
 }
 
 .carousel .carousel-panels .carousel-panel.active {
@@ -124,14 +124,14 @@
 
 .carousel .carousel-panels .carousel-start {
     border-style: solid;
-    border-width: 0.5rem 0 0.5rem 1rem;
+    border-width: 0.5em 0 0.5em 1em;
     border-color: transparent transparent transparent rgba(255, 255, 255, .75);
     box-sizing: border-box;
 }
 
 .carousel .carousel-panels .carousel-stop {
     border-style: double;
-    border-width: 0 0 0 1rem;
+    border-width: 0 0 0 1em;
     border-color: rgba(255, 255, 255, .75);
     box-sizing: border-box;
 }

@@ -13,14 +13,14 @@ export default class Carousel extends Component {
             slide: true
         }
 
-        this.slide = setInterval(this.handleRight, 1000);
+        this.slide = setInterval(this.handleRight, 2000);
     }
 
     handleStart = () => {
         this.setState({
             slide: true
         }, () => {
-            this.slide = setInterval(this.handleRight, 1000);
+            this.slide = setInterval(this.handleRight, 2000);
         })
     }
 
