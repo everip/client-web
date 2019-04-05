@@ -9,6 +9,11 @@
     transition: .0s;
     background: #333;
     overflow: hidden;
+    transition-duration: .25s;
+}
+
+.sidebar.down {
+    opacity: 0;
 }
 
 .sidebar.true {

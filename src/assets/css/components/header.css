@@ -9,6 +9,10 @@
     font-family: 'Hi Melody', cursive;
 }
 
+.header.down {
+    opacity: 0;
+}
+
 .header .header-logo {
     margin: auto;
     color: #fff;

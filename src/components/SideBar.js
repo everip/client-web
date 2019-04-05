@@ -24,16 +24,16 @@ export default class SideBar extends Component {
         } = this.state;
 
         return (
-            <div className={`sidebar ${toggle}`}>
+            <div className={`sidebar ${toggle} ${this.props.way}`}>
                 <div
                     className={`sidebar-toggle`}
                     onClick={this.handleToggle}
                 >
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
+                    <span className={`bar`}></span>
+                    <span className={`bar`}></span>
+                    <span className={`bar`}></span>
                 </div>
-                <div className='sidebar-container'>
+                <div className={`sidebar-container`}>
                     <ol>
                         <li>About</li>
                         <li>About</li>
