@@ -12,15 +12,15 @@ export default class Carousel extends Component {
             size: props.data.length,
             slide: true
         }
-
-        this.slide = setInterval(this.handleRight, 2000);
+        this.time = props.time * 1000;
+        this.slide = setInterval(this.handleRight, this.time);
     }
 
     handleStart = () => {
         this.setState({
             slide: true
         }, () => {
-            this.slide = setInterval(this.handleRight, 2000);
+            this.slide = setInterval(this.handleRight, this.time);
         })
     }
 
@@ -62,9 +62,9 @@ export default class Carousel extends Component {
         } = data.find((datum, index) => index === current);
 
         return (
-            <div className='carousel-container'>
-                <div className='carousel'>
-                    <div className='carousel-items'>
+            <div className={`carousel-container`}>
+                <div className={`carousel`}>
+                    <div className={`carousel-items`}>
                         <div
                             className={`carousel-item`}
                             style={{
@@ -72,26 +72,26 @@ export default class Carousel extends Component {
                             }}
                         />
                     </div>
-                    <div className='carousel-contents'>
+                    <div className={`carousel-contents`}>
                         <div
                             className={`carousel-content`}
                         >
                             {content}
                         </div>
                     </div>
-                    <div className='carousel-control carousel-left'>
+                    <div className={`carousel-control carousel-left`}>
                         <span onClick={this.handleLeft}>＜</span>
                     </div>
-                    <div className='carousel-control carousel-right'>
+                    <div className={`carousel-control carousel-right`}>
                         <span onClick={this.handleRight}>＞</span>
                     </div>
-                    <div className='carousel-indicator'>
-                        <div className='carousel-panels'>
+                    <div className={`carousel-indicator`}>
+                        <div className={`carousel-panels`}>
                             {
                                 data.map((datum, index) =>
                                     <span
                                         key={index}
-                                        className={`carousel-panel ${current === index && 'active'}`}
+                                        className={`carousel-panel ${current === index && `active`}`}
                                         onClick={this.handleMove.bind(this, index)}
                                     />
                                 )

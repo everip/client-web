@@ -18,15 +18,15 @@ export default class Box extends Component {
             >
                 {
                     left &&
-                    <div className='left container'>
+                    <div className={`left container`}>
                         {
                             set === 'left' &&
-                            <div className='boxes'>
+                            <div className={`boxes`}>
                                 {boxes}
                             </div>
                         }
                         <div
-                            className='item'
+                            className={`item`}
                             style={{
                                 backgroundImage: `url(${left.path})`
                             }}
@@ -35,15 +35,15 @@ export default class Box extends Component {
                 }
                 {
                     center &&
-                    <div className='center container'>
+                    <div className={`center container`}>
                         {
-                            set === 'center' &&
-                            <div className='boxes'>
+                            set === `center` &&
+                            <div className={`boxes`}>
                                 {boxes}
                             </div>
                         }
                         <div
-                            className='item'
+                            className={`item`}
                             style={{
                                 backgroundImage: `url(${center.path})`
                             }}
@@ -52,15 +52,15 @@ export default class Box extends Component {
                 }
                 {
                     right &&
-                    <div className='right container'>
+                    <div className={`right container`}>
                         {
-                            set === 'right' &&
-                            <div className='boxes'>
+                            set === `right` &&
+                            <div className={`boxes`}>
                                 {boxes}
                             </div>
                         }
                         <div
-                            className='item'
+                            className={`item`}
                             style={{
                                 backgroundImage: `url(${right.path})`
                             }}
@@ -69,7 +69,7 @@ export default class Box extends Component {
                 }
                 {
                     left === undefined && center === undefined && right === undefined &&
-                    <div className='boxes'>
+                    <div className={`boxes`}>
                         {boxes}
                     </div>
                 }
