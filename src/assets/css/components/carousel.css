@@ -4,7 +4,7 @@
     height: 100%;
     overflow: hidden;
     background: rgba(0, 0, 0, .25);
-    font-family: 'Poor Story', cursive;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 .carousel {
@@ -56,6 +56,10 @@
     color: rgba(255, 255, 255, .95);
     font-size: 2.5em;
     text-align: center;
+}
+
+.carousel-contents .carousel-content .body * {
+    margin: 0 0.25em;
 }
 
 .carousel .carousel-control {
