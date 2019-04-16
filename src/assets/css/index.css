@@ -3,3 +3,16 @@
 html, body {
     background: white;
 }
+
+.page {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 15em);
+}
+
+.page>.page-container {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 5em;
+    width: 1080px;
+}
