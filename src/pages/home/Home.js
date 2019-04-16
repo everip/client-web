@@ -7,7 +7,7 @@ import Images from '../../assets/img';
 import Box from './Box';
 import Wrapper from './Wrapper';
 
-import '../../assets/css/pages/home/home.css';
+import '../../assets/css/pages/home/index.css';
 
 export default class Home extends Component {
     render = () => {
@@ -15,6 +15,7 @@ export default class Home extends Component {
             <div className={`home`}>
                 <div className={`main-carousel`}>
                     <Carousel
+                        remote={true}
                         time={2.5}
                         data={[
                             {
