@@ -12,8 +12,16 @@ export default class Carousel extends Component {
             size: props.data.length,
             slide: true
         }
+
         this.time = props.time * 1000;
+    }
+
+    componentDidMount = () => {
         this.slide = setInterval(this.handleRight, this.time);
+    }
+
+    componentWillUnmount = () => {
+        clearInterval(this.slide);
     }
 
     handleStart = () => {
@@ -79,29 +87,34 @@ export default class Carousel extends Component {
                             {content}
                         </div>
                     </div>
-                    <div className={`carousel-control carousel-left`}>
-                        <span onClick={this.handleLeft}>＜</span>
-                    </div>
-                    <div className={`carousel-control carousel-right`}>
-                        <span onClick={this.handleRight}>＞</span>
-                    </div>
-                    <div className={`carousel-indicator`}>
-                        <div className={`carousel-panels`}>
-                            {
-                                data.map((datum, index) =>
+                    {
+                        this.props.remote &&
+                        <>
+                            <div className={`carousel-control carousel-left`}>
+                                <span onClick={this.handleLeft}>＜</span>
+                            </div>
+                            <div className={`carousel-control carousel-right`}>
+                                <span onClick={this.handleRight}>＞</span>
+                            </div>
+                            <div className={`carousel-indicator`}>
+                                <div className={`carousel-panels`}>
+                                    {
+                                        data.map((datum, index) =>
+                                            <span
+                                                key={index}
+                                                className={`carousel-panel ${current === index && `active`}`}
+                                                onClick={this.handleMove.bind(this, index)}
+                                            />
+                                        )
+                                    }
                                     <span
-                                        key={index}
-                                        className={`carousel-panel ${current === index && `active`}`}
-                                        onClick={this.handleMove.bind(this, index)}
+                                        className={`carousel-${slide ? 'stop' : 'start'}`}
+                                        onClick={slide ? this.handleStop : this.handleStart}
                                     />
-                                )
-                            }
-                            <span
-                                className={`carousel-${slide ? 'stop' : 'start'}`}
-                                onClick={slide ? this.handleStop : this.handleStart}
-                            />
-                        </div>
-                    </div>
+                                </div>
+                            </div>
+                        </>
+                    }
                 </div>
             </div>
         );
