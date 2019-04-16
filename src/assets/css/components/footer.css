@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     height: 15em;
-    filter: blur(0.5px);
+    filter: blur(.5px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,14 +10,14 @@
     font-family: 'Sunflower', sans-serif;
 }
 
-.footer .footer-back {
+.footer>.footer-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, .75);
 }
 
-.footer-overlay {
+.footer>.footer-overlay {
     display: flex;
     position: absolute;
     width: 100%;
@@ -26,29 +26,26 @@
 
 .footer-overlay .footer-content {
     margin: auto;
-}
-
-.footer .footer-overlay .footer-content {
     color: #808080;
     font-size: 1.25em;
 }
 
-.footer .footer-overlay .footer-content .links {
+.footer-overlay .footer-content .links {
     display: flex;
     margin-top: 1.5em;
 }
 
-.footer .footer-overlay .footer-content .links span {
+.footer-overlay .footer-content .links span {
     width: 4em;
     margin: auto;
-    padding: 0.5em 1em;
-    border: 0.15em solid #555;
-    border-radius: 0.25em;
+    padding: .5em 1em;
+    border: .15em solid #555;
+    border-radius: .25em;
     text-align: center;
     cursor: pointer;
 }
 
-.footer .footer-overlay .footer-content .links span:last-child {
+.footer-overlay .footer-content .links span:last-child {
     background: #555;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(0, 0, 0, .75);
 }
