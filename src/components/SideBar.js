@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import '../assets/css/components/sidebar.css';
 
@@ -10,6 +11,12 @@ export default class SideBar extends Component {
         this.state = {
             toggle: false
         }
+    }
+
+    componentWillReceiveProps = () => {
+        this.setState((prev) => ({
+            toggle: prev.toggle && this.props.way === `down`
+        }));
     }
 
     handleToggle = () => {
@@ -35,11 +42,8 @@ export default class SideBar extends Component {
                 </div>
                 <div className={`sidebar-container`}>
                     <ol>
-                        <li>About</li>
-                        <li>About</li>
-                        <li>About</li>
-                        <li>About</li>
-                        <li>About</li>
+                        <li><Link to="/" onClick={this.handleToggle}>HOME</Link></li>
+                        <li><Link to="/JAPAN" onClick={this.handleToggle}>COUNTRY</Link></li>
                     </ol>
                 </div>
             </div>
