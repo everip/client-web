@@ -15,8 +15,9 @@ import {
   Error as ErrorPage,
 } from './pages';
 
-import './assets/css/index.css';
 import './assets/css/reset.css';
+import './assets/css/index.css';
+import './assets/css/image.css';
 
 class App extends Component {
   constructor(props) {
