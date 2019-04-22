@@ -1,0 +1,93 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+.box.right-bottom-big>.right.each>.bottom {
+    height: calc(100% - 7.65rem);
+}
+
+.box .full {
+    display: block;
+}
+
+.box>div {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+/* LEFT or RIGHT */
+.box>.left {
+    width: 50%;
+    margin-right: auto;
+}
+
+.box>.right {
+    width: 50%;
+    margin-left: auto;
+}
+
+/* LEFT or RIGHT */
+/* TOP or BOTTOM or MIDDLE */
+.box>div>div {
+    width: 100%;
+}
+
+.box>.left>div {
+    margin-right: .75em;
+}
+
+.box>.right>div {
+    margin-left: .75em;
+}
+
+.box>.left>.middle,
+.box>.right>.middle {
+    width: 100%;
+}
+
+.box>div.each {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.box>.left.each>.top,
+.box>.left.each>.bottom,
+.box>.right.each>.top,
+.box>.right.each>.bottom {
+    width: calc(100% - .75em);
+}
+
+.box>.left.each>.top,
+.box>.right.each>.top {
+    margin-bottom: .75em;
+}
+
+.box>div>div>.head {
+    font-size: 1.15em;
+    line-height: 1.15em;
+    height: 1.15em;
+    margin-bottom: .25em;
+    color: #F2B807;
+    font-family: 'Jua', sans-serif;
+    text-decoration: underline;
+}
+
+.box>div>div>.body {
+    position: relative;
+    height: calc(100% - 1.85em);
+    border-radius: .25em;
+    min-height: 5em;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .11), 0 1px 2px rgba(0, 0, 0, .22);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.box>div>div>.body>* {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
