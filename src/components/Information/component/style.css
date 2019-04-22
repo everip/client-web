@@ -1,0 +1,53 @@
+.information {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.information>div {
+    margin: 0 auto;
+}
+
+.information>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.information>div:first-child>div {
+    width: 100%;
+    margin: auto 0;
+    padding: 0.5em 0em 0.5em 1.25em;
+}
+
+.information>div:last-child>div {
+    margin: auto 2.5em auto 0em;
+    text-align: center;
+}
+
+.information>div:last-child>div>.comment {
+    margin-bottom: 0.75em;
+    color: #666;
+    font-size: 1.25em;
+    font-weight: 800;
+}
+
+.information>div:last-child>div span {
+    display: table-cell;
+    width: 1.25em;
+    padding: 0.25em;
+    color: #999;
+    font-size: 1.25em;
+}
+
+.information>div:last-child>div span.recommend {
+    color: #8bc34a;
+}
+
+.information>div:last-child>div span.current {
+    color: #ffeb3b;
+}
+
+.information>div:last-child>div span.recommend.current {
+    color: #03a9f4;
+}

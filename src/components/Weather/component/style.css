@@ -1,0 +1,28 @@
+.weather {
+    display: flex;
+}
+
+.weather>div {
+    margin: auto 0;
+}
+
+.weather>.icon {
+    width: 7.5em;
+    height: 5.5em;
+    margin-right: 2.5em;
+}
+
+.weather>.content {
+    text-transform: uppercase;
+}
+
+.weather>.content>.temperature {
+    margin-bottom: .25em;
+    color: #666;
+    font-size: 1.75em;
+}
+
+.weather>.content>.text {
+    color: #999;
+    font-size: 0.95em;
+}

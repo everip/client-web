@@ -1,3 +1,3 @@
-import Country from './Country';
+import Country from './page';
 
 export default Country;

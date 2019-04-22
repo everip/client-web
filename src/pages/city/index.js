@@ -1,3 +1,3 @@
-import City from './City';
+import City from './page';
 
 export default City;

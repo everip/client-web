@@ -17,7 +17,7 @@ import {
 
 import './assets/css/reset.css';
 import './assets/css/index.css';
-import './assets/css/image.css';
+import './assets/css/icon.css';
 
 class App extends Component {
   constructor(props) {

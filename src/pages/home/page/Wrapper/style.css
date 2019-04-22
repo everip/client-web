@@ -1,0 +1,71 @@
+.home-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 35em;
+    overflow: hidden;
+}
+
+.home-wrapper .container {
+    width: 0;
+    height: 0;
+}
+
+.home-wrapper .item {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-wrapper.full .boxes {
+    display: flex;
+    margin: auto;
+}
+
+.home-wrapper.full .home-box {
+    width: 50em;
+}
+
+.home-wrapper.full.us .home-box {
+    width: 15em;
+}
+
+.home-wrapper.full.us .home-box .icon {
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.home-wrapper.full.us .home-box .icon:hover {
+    filter: blur(1px);
+}
+
+.home-wrapper.full.us .home-box .content .head {
+    cursor: pointer;
+}
+
+.home-wrapper.left .left,
+.home-wrapper.right .right,
+.home-wrapper.center .center {
+    width: 30em;
+    height: 100%;
+}
+
+.home-wrapper.left .right,
+.home-wrapper.right .left {
+    width: calc(100% - 30em);
+    height: 100%;
+}
+
+.home-wrapper.center .left,
+.home-wrapper.center .right {
+    width: calc(100% - 30em);
+    height: 100%;
+}
+
+.home-wrapper.left .left .item,
+.home-wrapper.right .right .item,
+.home-wrapper.center .center .item {
+    height: calc(100% - 25em);
+}
