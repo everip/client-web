@@ -1,0 +1,15 @@
+.datetime {
+    display: block;
+}
+
+.datetime>.date {
+    margin-bottom: .25em;
+    color: #999;
+    font-size: 0.95em;
+}
+
+.datetime>.time {
+    padding-left: .5em;
+    color: #666;
+    font-size: 1.75em;
+}
