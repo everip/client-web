@@ -1,6 +1,6 @@
-import Footer from './components/footer.jpg';
-import Email from './components/email.svg';
-import Git from './components/git.svg';
+import Email from './components/header/email.svg';
+import Git from './components/header/git.svg';
+import Footer from './components/footer/footer.jpg';
 
 import HomeCarouselOsaka from './pages/home/carousel-osaka.jpg';
 import HomeCarouselBangkok from './pages/home/carousel-bangkok.jpg';
