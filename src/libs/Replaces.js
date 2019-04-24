@@ -5,14 +5,14 @@ const fromSpaceToPlus = (value) => {
     return '';
 }
 
-const fromPlusToSpace = (value) => {
-    if (Values.valueable(value)) return value.replace(/\+/gi, ' ');
+const fromPlusToUnderLine = (value) => {
+    if (Values.valueable(value)) return value.replace('+', '_');
     return '';
 }
 
 const Replaces = {
     fromSpaceToPlus,
-    fromPlusToSpace,
+    fromPlusToUnderLine
 }
 
 export default Replaces;
