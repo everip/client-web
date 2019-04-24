@@ -67,6 +67,7 @@ export default class Deck extends Component {
                                     head,
                                     body,
                                     to,
+                                    from,
                                     custom,
                                     hashtags
                                 } = datum;
@@ -74,6 +75,7 @@ export default class Deck extends Component {
                                 return (
                                     <Card
                                         to={to}
+                                        from={from}
                                         active={is && hashtags && hashtags.some(hashtag => D_hashtags[hashtag])}
                                         head={head}
                                         body={body}

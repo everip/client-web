@@ -24,6 +24,7 @@ export default class Grid extends Component {
                                 head,
                                 body,
                                 to,
+                                from,
                                 click,
                                 custom,
                             } = datum;
@@ -33,6 +34,7 @@ export default class Grid extends Component {
                                     head={head}
                                     body={body}
                                     to={to}
+                                    from={from}
                                     click={click}
                                     custom={custom}
                                     key={index}

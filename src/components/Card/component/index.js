@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Replaces } from '../../../libs';
+import { Replaces, URLs } from '../../../libs';
 
 import './style.css';
 
@@ -11,6 +11,7 @@ export default class Card extends Component {
             head,
             body,
             to,
+            from,
             click,
             custom = null,
             active = true
@@ -27,10 +28,16 @@ export default class Card extends Component {
                             custom
                             :
                             <Link
-                                to={Replaces.fromSpaceToPlus(to)}
+                                to={
+                                    to ? `${URLs.path()}/${Replaces.fromSpaceToPlus(body.title)}`
+                                    : from ? `${URLs.prevPath()}/${Replaces.fromSpaceToPlus(body.title)}`
+                                    : URLs.prevPath()
+                                }
                                 onClick={
-                                    (event) => {
-                                        click();
+                                    to || from
+                                    ? () => {}
+                                    : (event) => {
+                                        click && click();
                                         event.preventDefault();
                                     }
                                 }
