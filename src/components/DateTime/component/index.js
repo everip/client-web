@@ -14,7 +14,8 @@ export default class DateTime extends Component {
 
         console.log(country, city);
 
-        // Dummy
+        // new Date(1556156214 * 1000)
+        
         const date = `2019월 4월 29일`;
         const time = `오후 3시 20분`;
 
