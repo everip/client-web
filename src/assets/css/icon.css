@@ -23,20 +23,16 @@
     background-image: url(../img/components/weather/snow.svg);
 }
 
-.icon.wind {
-    background-image: url(../img/components/weather/wind.svg);
-}
-
 .icon.fog {
     background-image: url(../img/components/weather/fog.svg);
 }
 
-.icon.hail {
-    background-image: url(../img/components/weather/hail.svg);
-}
-
 .icon.storm {
     background-image: url(../img/components/weather/storm.svg);
+}
+
+.icon.tornado {
+    background-image: url(../img/components/weather/tornado.svg);
 }
 
 .icon.naver {
