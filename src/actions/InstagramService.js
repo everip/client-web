@@ -2,13 +2,13 @@ import axios from 'axios';
 
 import { Replaces } from '../libs';
 
-const GETS = (sight) => {
+const SEARCH = ({sight}) => {
     return axios({
-        method: `get`,
+        method: `GET`,
         url: `https://www.instagram.com/explore/tags/${Replaces.fromPlusToUnderLine(sight)}/?__a=1`,
     });
 };
 
 export {
-    GETS,
+    SEARCH,
 }
