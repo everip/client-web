@@ -17,6 +17,10 @@ import {
     faHandPointRight,
     faCloudSunRain,
     faEquals,
+    faCaretUp,
+    faCaretDown,
+    faWind,
+    faTint,
 } from '@fortawesome/free-solid-svg-icons';
 import {
 
@@ -34,6 +38,10 @@ library.add(
     faHandPointRight,
     faCloudSunRain,
     faEquals,
+    faCaretUp,
+    faCaretDown,
+    faWind,
+    faTint,
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));

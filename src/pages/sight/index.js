@@ -5,7 +5,8 @@ import { Carousel, Box, Information, Map, List, Grid } from '../../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './style.css';
-import { InstagramService } from '../../actions';
+
+import { InstagramService, NaverService } from '../../actions';
 
 export default class Sight extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ export default class Sight extends Component {
             sight
         } = this.state;
 
-        InstagramService.GETS(sight)
+        InstagramService.SEARCH({ sight })
             .then(({ data: { graphql: { hashtag: { edge_hashtag_to_top_posts: { edges: data } } } } }) => {
                 const instagram = Array.from(data, ({ node: datum }) => {
                     return {
@@ -32,6 +33,7 @@ export default class Sight extends Component {
                         },
                         body: {
                             title: `♥︎ ${datum.edge_liked_by.count}`,
+                            subtitle: new Date(datum.taken_at_timestamp * 1000).toDateString()
                         },
                         click: () => {
                             window.open(`https://www.instagram.com/p/${datum.shortcode}`);
@@ -41,6 +43,11 @@ export default class Sight extends Component {
                 this.setState({
                     instagram
                 });
+            });
+
+        NaverService.SEARCH(sight)
+            .then(response => {
+                console.log(response);
             });
     }
 
@@ -176,7 +183,7 @@ export default class Sight extends Component {
                                     />
                             },
                             bottom: {
-                                className: `sight-instargram`,
+                                className: `sight-instagram`,
                                 head: <span><FontAwesomeIcon icon={`hashtag`} />인스타그램</span>,
                                 body:
                                     <Grid

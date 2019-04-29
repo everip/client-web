@@ -55,47 +55,47 @@
     height: fit-content !important;
 }
 
-.sight-instargram {
+.sight-instagram {
     height: calc(100% - 7.35em) !important;
 }
 
-.sight-instargram>.body {
+.sight-instagram>.body {
     box-shadow: none !important;
 }
 
-.sight-instargram .card {
+.sight-instagram .card {
     width: 10em !important;
     height: 100% !important;
     margin-right: 1.5em !important;
 }
 
-.sight-instargram .card:last-child {
+.sight-instagram .card:last-child {
     margin-right: 0em !important;
 }
 
-.sight-instargram .card .content {
+.sight-instagram .card .content {
     width: 10em !important;
     height: 100% !important;
 }
 
-.sight-instargram .card .content>.head {
+.sight-instagram .card .content>.head {
     width: 10em !important;
     height: 10em !important;
 }
 
-.sight-instargram .card .content>.body {
+.sight-instagram .card .content>.body {
     width: 10em !important;
     height: calc(100% - 10em) !important;
 }
 
-.sight-instargram .card .content>.body>.title {
+.sight-instagram .card .content>.body>.title {
     top: .25rem !important;
     left: .5rem !important;
     font-size: 1.15em !important;
     text-decoration: none !important;
 }
 
-.sight-instargram .card .content>.body>.subtitle {
+.sight-instagram .card .content>.body>.subtitle {
     bottom: .25rem !important;
     left: .75rem !important;
     font-size: 0.75em !important;
