@@ -20,46 +20,12 @@ import './assets/css/index.css';
 import './assets/css/icon.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      scroll: window.pageYOffset,
-      way: 'up'
-    };
-  }
-
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.handleScroll, { passive: true });
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.handleScroll);
-  };
-
-  handleScroll = (event) => {
-    if (!this.scroll) {
-      this.scroll = setTimeout(() => {
-        const scroll = window.pageYOffset;
-        const path = window.location.pathname;
-        if (path === '/')
-          this.setState((prev) => ({
-            scroll,
-            way: prev.scroll > scroll ? 'up' : 'down'
-          }));
-        this.scroll = false;
-      }, 500)
-    }
-  }
-
   render() {
-    const { way } = this.state;
-
     return (
       <>
-        <Header way={way} />
+        <Header />
         <Router>
-          <SideBar way={way} />
+          <SideBar />
           <Scroll />
           <Switch>
             <Route exact path='/' component={HomePage} />

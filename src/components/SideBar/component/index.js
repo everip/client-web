@@ -13,12 +13,6 @@ export default class SideBar extends Component {
         }
     }
 
-    componentWillReceiveProps = () => {
-        this.setState((prev) => ({
-            toggle: prev.toggle && this.props.way === `down`
-        }));
-    }
-
     handleToggle = () => {
         this.setState((prev) => ({
             toggle: !prev.toggle
@@ -31,7 +25,7 @@ export default class SideBar extends Component {
         } = this.state;
 
         return (
-            <div className={`sidebar ${toggle} ${this.props.way}`}>
+            <div className={`sidebar ${toggle}`}>
                 <div
                     className={`sidebar-toggle`}
                     onClick={this.handleToggle}

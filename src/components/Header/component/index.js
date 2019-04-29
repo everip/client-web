@@ -7,7 +7,7 @@ import './style.css';
 export default class Header extends Component {
     render = () => {
         return (
-            <header className={`header ${this.props.way}`}>
+            <header className={`header`}>
                 <div className={`header-logo`}>
                     EVERIP
                 </div>
