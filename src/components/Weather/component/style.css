@@ -9,17 +9,76 @@
 .weather>.icon {
     width: 7.5em;
     height: 5.5em;
-    margin-right: 2.5em;
+    margin-right: 1.5em;
 }
 
 .weather>.content {
     text-transform: uppercase;
 }
 
-.weather>.content>.temperature {
-    margin-bottom: .25em;
+.weather>.content>div {
+    display: flex;
     color: #666;
-    font-size: 1.75em;
+}
+
+.weather>.content>div:last-child {
+    margin-bottom: 0;
+}
+
+.weather>.content svg {
+    margin-right: .15em;
+}
+
+.weather>.content>.temperature {
+    font-size: 2.25em;
+    margin-bottom: 0.25em;
+}
+
+.weather>.content>.temperature>div:first-child {
+    margin-right: .25em;
+}
+
+.weather>.content>.temperature>div:last-child>span {
+    font-size: 0.75rem;
+    display: block;
+}
+
+.weather>.content>.temperature>div:last-child>span {
+    margin: auto;
+}
+
+.weather>.content>.temperature>div:last-child>span:first-child {
+    margin-right: .5em;
+}
+
+.weather>.content>.temperature .max>svg {
+    color: #D93D4A;
+}
+
+.weather>.content>.temperature .min>svg {
+    color: #1F5AA6;
+}
+
+.weather>.content>.wind-humidity {
+    text-transform: none;
+    font-size: 0.85em;
+    margin-bottom: 0.25em;
+}
+
+.weather>.content>.wind-humidity>div {
+    margin-right: 0.5em;
+}
+
+.weather>.content>.wind-humidity>div:last-child {
+    margin-right: 0;
+}
+
+.weather>.content>.wind-humidity>div:first-child svg {
+    color: #91AAB4;
+}
+
+.weather>.content>.wind-humidity>div:last-child svg {
+    color: #244673;
 }
 
 .weather>.content>.text {

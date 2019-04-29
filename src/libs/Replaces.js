@@ -5,6 +5,11 @@ const fromSpaceToPlus = (value) => {
     return '';
 }
 
+const fromPlusToSpace = (value) => {
+    if (Values.valueable(value)) return value.replace('+', ' ');
+    return '';
+}
+
 const fromPlusToUnderLine = (value) => {
     if (Values.valueable(value)) return value.replace('+', '_');
     return '';
@@ -12,6 +17,7 @@ const fromPlusToUnderLine = (value) => {
 
 const Replaces = {
     fromSpaceToPlus,
+    fromPlusToSpace,
     fromPlusToUnderLine
 }
 
