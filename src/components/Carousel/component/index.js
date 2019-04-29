@@ -90,12 +90,6 @@ export default class Carousel extends Component {
                     {
                         this.props.remote &&
                         <>
-                            <div className={`carousel-control left`}>
-                                <span onClick={this.handleLeft}>＜</span>
-                            </div>
-                            <div className={`carousel-control right`}>
-                                <span onClick={this.handleRight}>＞</span>
-                            </div>
                             <div className={`carousel-control indicator`}>
                                 <div className={`carousel-panels`}>
                                     {
@@ -112,6 +106,12 @@ export default class Carousel extends Component {
                                         onClick={slide ? this.handleStop : this.handleStart}
                                     />
                                 </div>
+                            </div>
+                            <div className={`carousel-control left`}>
+                                <span onClick={this.handleLeft}>＜</span>
+                            </div>
+                            <div className={`carousel-control right`}>
+                                <span onClick={this.handleRight}>＞</span>
                             </div>
                         </>
                     }
