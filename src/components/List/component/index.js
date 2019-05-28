@@ -19,12 +19,14 @@ export default class List extends Component {
                             const {
                                 icon,
                                 text,
+                                click
                             } = datum;
 
                             return (
                                 <li
                                     className={`item`}
                                     key={index}
+                                    onClick={click}
                                 >
                                     <div className={`icon ${icon}`}></div>
                                     <div className={`text`}>{text}</div>
