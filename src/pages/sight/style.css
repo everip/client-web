@@ -22,7 +22,10 @@
 }
 
 .sight-blog .list>.item {
-    height: 5em;
+    height: fit-content;
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em; 
+    cursor: pointer;
 }
 
 .sight-blog .list>.item>.icon {
@@ -48,7 +51,12 @@
 
 .sight-blog .list>.item>.text>.content {
     color: #999;
-    font-size: .95em
+    font-size: .95em;
+}
+
+.sight-blog .list>.item>.text>.content>.published {
+    color: #777;
+    margin-right: .5em;
 }
 
 .sight-route {
@@ -106,7 +114,7 @@
     box-shadow: none;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 720px) {
     .sight-box {
         margin: 0;
     }

@@ -7,12 +7,8 @@ import './style.css';
 export default class DateTime extends Component {
     render = () => {
         const {
-            country,
-            city,
             className
         } = this.props;
-
-        console.log(country, city);
 
         // new Date(1556156214 * 1000)
         

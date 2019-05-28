@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './style.css';
 
-import { InstagramService } from '../../actions';
+import { WeatherService, InstagramService, NaverService } from '../../actions';
 
 import { Replaces } from '../../libs';
 
@@ -23,10 +23,20 @@ export default class Sight extends Component {
 
     componentDidMount = () => {
         const {
+            country,
+            city,
             sight
         } = this.state;
 
-        InstagramService.SEARCH({ sight })
+        WeatherService.SEARCH(country, city)
+            .then((response) => {
+                const weather = response.data
+                this.setState({
+                    weather
+                });
+            })
+
+        InstagramService.SEARCH(sight)
             .then(response => {
                 const instagram = Array.from(response.data, datum => {
                     return {
@@ -46,6 +56,29 @@ export default class Sight extends Component {
                     instagram
                 });
             });
+
+        NaverService.SEARCH(`${sight} 맛집`)
+            .then(response => {
+                const naver = Array.from(response.data, datum => {
+                    return {
+                        icon: `naver`,
+                        text:
+                            <>
+                                <div className={`title`}>{datum.title}</div>
+                                <div className={`content`}>
+                                    <span className={`published`}>{datum.published}</span>
+                                    {datum.description}
+                                </div>
+                            </>,
+                        click: () => {
+                            window.open(datum.url);
+                        }
+                    }
+                })
+                this.setState({
+                    naver
+                });
+            });
     }
 
     render = () => {
@@ -53,7 +86,9 @@ export default class Sight extends Component {
             country,
             city,
             sight,
-            instagram
+            weather,
+            instagram,
+            naver,
         } = this.state;
 
         return (
@@ -88,9 +123,7 @@ export default class Sight extends Component {
                                 head: <span><FontAwesomeIcon icon={`info`} />정보</span>,
                                 body:
                                     <Information
-                                        country={country}
-                                        city={city}
-                                        sight={sight}
+                                        weather={weather}
                                     />
                             }
                         }}
@@ -116,48 +149,7 @@ export default class Sight extends Component {
                                 head: <span><FontAwesomeIcon icon={`utensils`} />근처 맛집</span>,
                                 body:
                                     <List
-                                        data={[
-                                            {
-                                                icon: `naver`,
-                                                text:
-                                                    <>
-                                                        <div className={`title`}>현지인들이 찾는 도쿄타워 주변 맛집"Soba Tokiwa" 소개해보아요~</div>
-                                                        <div className={`content`}>나리타 공항에 내려 공항버스를 이용해 도쿄타워가 보이는 도쿄프린스호텔에 도착했다.</div>
-                                                    </>
-                                            },
-                                            {
-                                                icon: `tistory`,
-                                                text:
-                                                    <>
-                                                        <div className={`title`}>현지인들이 찾는 도쿄타워 주변 맛집"Soba Tokiwa" 소개해보아요~</div>
-                                                        <div className={`content`}>나리타 공항에 내려 공항버스를 이용해 도쿄타워가 보이는 도쿄프린스호텔에 도착했다.</div>
-                                                    </>
-                                            },
-                                            {
-                                                icon: `naver`,
-                                                text:
-                                                    <>
-                                                        <div className={`title`}>현지인들이 찾는 도쿄타워 주변 맛집"Soba Tokiwa" 소개해보아요~</div>
-                                                        <div className={`content`}>나리타 공항에 내려 공항버스를 이용해 도쿄타워가 보이는 도쿄프린스호텔에 도착했다.</div>
-                                                    </>
-                                            },
-                                            {
-                                                icon: `naver`,
-                                                text:
-                                                    <>
-                                                        <div className={`title`}>현지인들이 찾는 도쿄타워 주변 맛집"Soba Tokiwa" 소개해보아요~</div>
-                                                        <div className={`content`}>나리타 공항에 내려 공항버스를 이용해 도쿄타워가 보이는 도쿄프린스호텔에 도착했다.</div>
-                                                    </>
-                                            },
-                                            {
-                                                icon: `naver`,
-                                                text:
-                                                    <>
-                                                        <div className={`title`}>현지인들이 찾는 도쿄타워 주변 맛집"Soba Tokiwa" 소개해보아요~</div>
-                                                        <div className={`content`}>나리타 공항에 내려 공항버스를 이용해 도쿄타워가 보이는 도쿄프린스호텔에 도착했다.</div>
-                                                    </>
-                                            }
-                                        ]}
+                                        data={naver}
                                     />
                             }
                         }}

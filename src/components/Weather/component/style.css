@@ -41,9 +41,6 @@
 .weather>.content>.temperature>div:last-child>span {
     font-size: 0.75rem;
     display: block;
-}
-
-.weather>.content>.temperature>div:last-child>span {
     margin: auto;
 }
 
@@ -62,7 +59,7 @@
 .weather>.content>.wind-humidity {
     text-transform: none;
     font-size: 0.85em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
 }
 
 .weather>.content>.wind-humidity>div {

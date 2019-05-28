@@ -1,12 +1,14 @@
-import axios from 'axios';
+import { Requests } from '../libs';
 
-import { secret } from '../config/OpenWeatherMap';
-
-const SEARCH = ({ country, city }) => {
-    return axios({
+const SEARCH = (country, city) => {
+    return Requests.Instance({
+        url: Requests.Peristalsis.Weather,
         method: `GET`,
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${secret}`,
-    });
+        params: {
+            country,
+            city
+        }
+    })
 };
 
 export {

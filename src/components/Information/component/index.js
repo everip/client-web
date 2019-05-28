@@ -9,12 +9,9 @@ import './style.css';
 export default class Information extends Component {
     render = () => {
         const {
-            country,
-            city,
+            weather,
             className
         } = this.props;
-
-        console.log(country, city)
 
         // Dummy
         const monthRecommend = [4, 5, 6];
@@ -24,9 +21,9 @@ export default class Information extends Component {
             <>
                 <div className={`information ${Values.valuabled(className)}`}>
                     <div>
-                        <DateTime country={country} city={city} />
-                        <Weather country={country} city={city} />
-                        <Exchange country={country} city={city} />
+                        <DateTime />
+                        <Weather weather={weather} />
+                        <Exchange />
                     </div>
                     <div>
                         <div>

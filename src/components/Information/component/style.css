@@ -52,7 +52,7 @@
     color: #03a9f4;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 720px) {
     .information {
         font-size: 0.85em !important;
     }

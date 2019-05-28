@@ -50,12 +50,8 @@ export default class Exchange extends Component {
 
     render = () => {
         const {
-            country,
-            city,
             className
         } = this.props;
-
-        console.log(country, city);
 
         // Dummy
         const {
