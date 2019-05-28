@@ -1,0 +1,18 @@
+@media screen and (max-width: 565px) {
+    .header-links {
+        right: 1.25em !important;
+    }
+
+    .sidebar,
+    .sidebar-toggle {
+        left: 1.25em !important;
+    }
+
+    .page-container {
+        padding-top: 4em !important;
+    }
+
+    .sight-carousel {
+        border-radius: 0 !important;
+    }
+}
