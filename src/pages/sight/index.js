@@ -6,16 +6,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './style.css';
 
-import { InstagramService, NaverService } from '../../actions';
+import { InstagramService } from '../../actions';
+
+import { Replaces } from '../../libs';
 
 export default class Sight extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            country: props.match.params.country,
-            city: props.match.params.city,
-            sight: props.match.params.sight
+            country: Replaces.fromPlusToSpace(props.match.params.country),
+            city: Replaces.fromPlusToSpace(props.match.params.city),
+            sight: Replaces.fromPlusToSpace(props.match.params.sight)
         };
     }
 
@@ -25,29 +27,24 @@ export default class Sight extends Component {
         } = this.state;
 
         InstagramService.SEARCH({ sight })
-            .then(({ data: { graphql: { hashtag: { edge_hashtag_to_top_posts: { edges: data } } } } }) => {
-                const instagram = Array.from(data, ({ node: datum }) => {
+            .then(response => {
+                const instagram = Array.from(response.data, datum => {
                     return {
                         head: {
-                            url: datum.thumbnail_src,
+                            url: datum.thumbnail,
                         },
                         body: {
-                            title: `♥︎ ${datum.edge_liked_by.count}`,
-                            subtitle: new Date(datum.taken_at_timestamp * 1000).toDateString()
+                            title: `♥︎ ${datum.liked}`,
+                            subtitle: datum.published
                         },
                         click: () => {
-                            window.open(`https://www.instagram.com/p/${datum.shortcode}`);
+                            window.open(datum.url);
                         }
                     }
                 });
                 this.setState({
                     instagram
                 });
-            });
-
-        NaverService.SEARCH(sight)
-            .then(response => {
-                console.log(response);
             });
     }
 
