@@ -14,12 +14,17 @@ html, body {
     margin: 0 auto;
     padding-top: 6em;
     padding-bottom: 2em;
-    width: 1080px;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 1024px;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 720px) {
     .page-container {
+        width: 100% !important;
         padding-top: 4em !important;
         padding-bottom: 1.25em !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
