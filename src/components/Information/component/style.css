@@ -51,3 +51,13 @@
 .information>div:last-child>div span.recommend.current {
     color: #03a9f4;
 }
+
+@media screen and (max-width: 565px) {
+    .information {
+        font-size: 0.85em !important;
+    }
+
+    .information>div:last-child>div {
+        margin: auto 1.5em !important;
+    }
+}

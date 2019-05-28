@@ -71,6 +71,7 @@
     font-size: 1.15em;
     line-height: 1.15em;
     height: 1.15em;
+    padding-left: .25em;
     margin-bottom: .25em;
     color: #F2B807;
     font-family: 'Jua', sans-serif;
@@ -90,4 +91,23 @@
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 565px) {
+    .box {
+        display: block !important;
+        margin: 0 !important;
+        height: auto !important;
+    }
+    
+    .box>div {
+        width: auto !important; 
+        margin: 0 1.25em !important;
+    }
+
+    .box>div>div,
+    .box>div>div {
+        width: 100% !important;
+        margin: 1.25em 0 !important;
+    }
 }

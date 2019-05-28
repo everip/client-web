@@ -21,3 +21,9 @@
 .grid>div:last-child {
     margin-right: 0;
 }
+
+@media screen and (max-width: 565px) {
+    .grid>div {
+        width: 85% !important;
+    }
+}

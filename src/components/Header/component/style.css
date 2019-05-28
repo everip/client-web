@@ -38,3 +38,9 @@
 .header>.header-links>img:last-child {
     margin-right: 0;
 }
+
+@media screen and (max-width: 565px) {
+    .header-links {
+        right: 1.25em !important;
+    }
+}

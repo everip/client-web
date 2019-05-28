@@ -3,7 +3,7 @@
 }
 
 .sight-box .head>span>svg {
-    margin-right: 0.5em;
+    margin-right: .5em;
 }
 
 .sight-carousel {
@@ -28,7 +28,7 @@
 .sight-blog .list>.item>.icon {
     width: 3.5em;
     height: 3.5em;
-    margin-right: 0.5em;
+    margin-right: .5em;
 }
 
 .sight-blog .list>.item>.text {
@@ -48,7 +48,7 @@
 
 .sight-blog .list>.item>.text>.content {
     color: #999;
-    font-size: 0.95em
+    font-size: .95em
 }
 
 .sight-route {
@@ -70,7 +70,7 @@
 }
 
 .sight-instagram .card:last-child {
-    margin-right: 0em;
+    margin-right: 0;
 }
 
 .sight-instagram .card .content {
@@ -98,10 +98,36 @@
 .sight-instagram .card .content>.body>.subtitle {
     bottom: .25rem;
     left: .75rem;
-    font-size: 0.75em;
+    font-size: .75em;
 }
 
 .sight-recommend>.middle>.body {
     height: 18em;
     box-shadow: none;
+}
+
+@media screen and (max-width: 565px) {
+    .sight-box {
+        margin: 0;
+    }
+
+    .sight-carousel {
+        border-radius: 0;
+    }
+
+    .sight-map {
+        height: 20em !important;
+    }
+
+    .sight-instagram>.body {
+        height: 12.5em !important;
+    }
+
+    .sight-instagram .card {
+        width: 10em !important;
+    }
+
+    .sight-instagram .card:not(:last-child) {
+        margin-right: 0.75em !important;
+    }
 }

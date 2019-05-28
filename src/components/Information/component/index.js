@@ -20,8 +20,6 @@ export default class Information extends Component {
         const monthRecommend = [4, 5, 6];
         const monthCurrent = new Date().getMonth() + 1;
 
-        console.log(monthRecommend);
-
         return (
             <>
                 <div className={`information ${Values.valuabled(className)}`}>

@@ -17,7 +17,6 @@ import {
 
 import './assets/css/reset.css';
 import './assets/css/index.css';
-import './assets/css/mobile.css';
 import './assets/css/icon.css';
 
 class App extends Component {

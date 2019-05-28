@@ -63,3 +63,9 @@
 .card .content .body .subtitle span:last-child {
     margin-right: 0;
 }
+
+@media screen and (max-width: 565px) {
+    .card {
+        width: calc(100% - 2.5em) !important;
+    }
+}
