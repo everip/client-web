@@ -39,7 +39,7 @@
     font-family: 'Sunflower', sans-serif;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 720px) {
     .deck>.head {
         padding: 1.5em 1.5em 0 1.5em !important;
     }

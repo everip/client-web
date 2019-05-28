@@ -76,7 +76,7 @@
     transform: rotate(45deg) translate(-.45em, -.45em)
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 720px) {
     .sidebar,
     .sidebar-toggle {
         left: 1.25em !important;

@@ -39,7 +39,7 @@
     margin-right: 0;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 720px) {
     .header-links {
         right: 1.25em !important;
     }

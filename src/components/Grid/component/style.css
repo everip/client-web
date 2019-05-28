@@ -22,7 +22,7 @@
     margin-right: 0;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 720px) {
     .grid>div {
         width: 85% !important;
     }
